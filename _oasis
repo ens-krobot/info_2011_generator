@@ -1,0 +1,26 @@
+OASISFormat: 0.1
+Name: krobot-generator
+Version: 0.1
+LicenseFile: LICENSE
+License: BSD3
+Authors: Jérémie Dimino
+Homepage: http://sourceforge.net/projects/krobot/
+BuildTools:ocamlbuild
+Plugins: DevFiles (0.2), META (0.2)
+Synopsis: krobot-generator
+Description: Generate source code from a protocol description
+
+Library "krobot-protocol"
+  Path: src
+  Install: true
+  Modules: Kgen_message
+  BuildDepends: camlp4.lib, camlp4.quotations.o, camlp4.extend
+  XMETARequires: camlp4.lib
+  XMETADescription: Parsing of messages
+
+Executable "krobot-proto2c"
+  Path: src
+  Install: true
+  CompiledObject: best
+  MainIs: krobot_proto2c.ml
+  BuildDepends: krobot-protocol

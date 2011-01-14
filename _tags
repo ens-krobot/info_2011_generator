@@ -1,0 +1,16 @@
+<src/*.ml>: syntax_camlp4o
+
+# OASIS_START
+# DO NOT EDIT (digest: 60cf244464842fbaf3a5b92f9af0378a)
+# Library krobot-protocol
+"src": include
+# Executable krobot-proto2c
+<src/krobot_proto2c.{native,byte}>: use_krobot-protocol
+<src/krobot_proto2c.{native,byte}>: pkg_camlp4.quotations.o
+<src/krobot_proto2c.{native,byte}>: pkg_camlp4.lib
+<src/krobot_proto2c.{native,byte}>: pkg_camlp4.extend
+<src/*.ml{,i}>: use_krobot-protocol
+<src/*.ml{,i}>: pkg_camlp4.quotations.o
+<src/*.ml{,i}>: pkg_camlp4.lib
+<src/*.ml{,i}>: pkg_camlp4.extend
+# OASIS_STOP

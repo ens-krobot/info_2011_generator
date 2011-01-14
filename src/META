@@ -1,0 +1,10 @@
+# OASIS_START
+# DO NOT EDIT (digest: 09b249757f2ad8e75c31321676b44493)
+version = "0.1"
+description = "Parsing of messages"
+requires = "camlp4.lib"
+archive(byte) = "krobot-protocol.cma"
+archive(native) = "krobot-protocol.cmxa"
+exists_if = "krobot-protocol.cma"
+# OASIS_STOP
+
